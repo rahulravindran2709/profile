@@ -8,6 +8,6 @@ module.exports = function (grunt) {
       }
     }
   });
-    grunt.registerTask('default', 'wiredep');
+    grunt.registerTask('build', 'wiredep');
 
 };
