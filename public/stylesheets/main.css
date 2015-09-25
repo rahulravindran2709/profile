@@ -105,41 +105,78 @@ textarea {
    ========================================================================== */
 
 body {
-    height: 2000px;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    background-image: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/06/galaxy-wallpapers-2.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #00ffff;
 }
 
 .jumbotron {
-    background-image: url('/images/index.png');
-    background-attachment: fixed;
-    background-repeat: repeat-x;
+    /*background-image: url('/images/index.png');*/
+    background-color: transparent;
     margin-bottom: 0px;
-    height: 420px;
-    padding-top:150px;
+    padding-top: 150px;
 }
 
 .jumbotron h1 {
     color: #fff;
-    text-align:center;
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Audiowide', Helvetica, serif;
+    text-transform: uppercase;
+    color: #00ffff;
+    transition-property: text-shadow;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
 }
+
+.jumbotron h1:hover {
+    transition-property: text-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: steps(1);
+    text-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 20px #00ffff, 0px 0px 30px #00ffff;
+}
+
+.window-pane {
+    /*background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);*/
+    background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid #00ffff;
+    border-radius: 3px;
+    width: 90%;
+    margin: 0 auto;
+    height: 50vh;
+}
+
+
 /**Navigation styles start**/
+
 #myScrollspy {
-    background-color: #3399FF;
-    background-image: linear-gradient(to top, #3399FF 0%, #3399FF 100%);
+    background-color: transparent;
+    background-image: none;
     color: #fff;
     z-index: 1000;
+    margin-bottom: 0px;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #fff;
+    color: #00ffff;
 }
 
 .navbar-default .navbar-nav > .active {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #000;
+    background-color: #fff;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
-    color: #fff;
+    color: #000;
     font-weight: bold;
     background-image: none;
 }
@@ -147,7 +184,7 @@ body {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    background-color: initial;
+    background-color: #00ffff;
 }
 
 .affix-top {
@@ -160,57 +197,163 @@ body {
     width: 100%;
 }
 
+.cursor {
+    display: inline;
+    height: 14px;
+    border-left: 5px solid #00ffff;
+    border-right: 5px solid #00ffff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+}
+
+.shiny {
+    /*  styling */
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 5px;
+    color: #FAFAFA;
+    border: 3px solid #00ffff;
+    border-left: none;
+    border-right: none;
+    /*  centering */
+    text-align: center;
+    &:hover {
+        background: rgba(8, 97, 76, 0.6);
+    }
+}
+
+.shiny>i {
+    /*   positioning */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    /*   gradient   */
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(1%, rgba(255, 255, 255, 0.03)), color-stop(30%, rgba(255, 255, 255, 0.85)), color-stop(50%, rgba(255, 255, 255, 0.85)), color-stop(70%, rgba(255, 255, 255, 0.85)), color-stop(71%, rgba(255, 255, 255, 0.85)), color-stop(100%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);
+    /* IE6-9 */
+    /*  forming the shine element
+    play around with the width, skew and gradient to get different effects
+  */
+    width: 15%;
+    height: 100%;
+    /*transform: skew(-10deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    -moz-transform: skew(-10deg, 0deg);
+    -ms-transform: skew(-10deg, 0deg);
+    -o-transform: skew(-10deg, 0deg);*/
+    /*  animating it  */
+    animation: move 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+
+/*  */
+
+@keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.2;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    35% {
+        opacity: 0.3;
+    }
+    48% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 0.1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        left: 82%;
+    }
+}
+
 
 /**Navigation styles end**/
 
 
 /**About me page styles start*/
 
-.portrait-img{
-    -webkit-transform:rotateZ(25deg) translate(0,90px);
-            transform:rotateZ(25deg) translate(0,90px);
-    -webkit-transform-origin: 0% top;
-            transform-origin: 0% top;
-            animation-name: swing;
-            animation-duration: 3s;
-            animation-delay: 0s;
-            animation-iteration-count: 2;
-            animation-direction: normal;
-            animation-fill-mode: none;
-            animation-play-state:running;
-            animation-timing-function: linear;
+.about-me-section {
+    border-radius: 3px;
+    background-color: initial;
+    background-image: transparent;
 }
 
-
-
-
-
+.portrait-img {
+    -webkit-transform: rotateZ(25deg) translate(0, 90px);
+    transform: rotateZ(25deg) translate(0, 90px);
+    -webkit-transform-origin: 0% top;
+    transform-origin: 0% top;
+    animation-name: swing;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
 
 @keyframes swing {
- 0% {
-    -webkit-transform:rotate(25deg) translate(0,90px) ;
-            transform:rotate(25deg) translate(0,90px);
+    0% {
+        -webkit-transform: rotate(25deg) translate(0, 90px);
+        transform: rotate(25deg) translate(0, 90px);
+    }
+    25% {
+        -webkit-transform: rotateZ(20deg) translate(0, 90px);
+        transform: rotateZ(20deg) translate(0, 90px);
+    }
+    50% {
+        -webkit-transform: rotate(15deg) translate(0, 90px);
+        transform: rotate(15deg) translate(0, 90px);
+    }
+    75% {
+        -webkit-transform: rotateZ(20deg) translate(0, 90px);
+        transform: rotateZ(20deg) translate(0, 90px);
+    }
+    100% {
+        -webkit-transform: rotate(25deg) translate(0, 90px);
+        transform: rotate(25deg) translate(0, 90px);
+    }
+}
 
- }
- 25% {
-    -webkit-transform:rotateZ(20deg) translate(0,90px);
-            transform:rotateZ(20deg) translate(0,90px);
-    
- }
- 50% {
-   -webkit-transform: rotate(15deg) translate(0,90px) ;
-           transform: rotate(15deg) translate(0,90px);
- }
+@keyframes blink{
+    0% {
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:1;
+    }
 
- 75% {
-   -webkit-transform: rotateZ(20deg) translate(0,90px);
-           transform: rotateZ(20deg) translate(0,90px);
- }
 
-100%{
-   -webkit-transform: rotate(25deg) translate(0,90px);
-           transform: rotate(25deg) translate(0,90px);
- }
 }
 /**About me page styles end*/
 
@@ -218,7 +361,6 @@ body {
 /* ==========================================================================
    Author's custom styles end
    ========================================================================== */
-
 
 
 /* ==========================================================================
