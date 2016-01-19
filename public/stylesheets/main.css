@@ -143,14 +143,16 @@ body {
 .window-pane {
     /*background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);*/
     background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
-    border: 1px solid #00ffff;
+    border: 2px solid #00ffff;
     border-radius: 3px;
     width: 90%;
     margin: 0 auto;
-    height: 50vh;
+    padding:20px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 20px #00ffff, 0px 0px 30px #00ffff;
 }
 
-
+.pane-heading{background-color:#00ffff;color:#000;padding:5px 10px;}
 /**Navigation styles start**/
 
 #myScrollspy {
@@ -374,6 +376,10 @@ body {
     }
 
 }
+.custom-scrollbar{
+    overflow-y:auto;
+    height:250px;
+    }
 /**About me page styles end*/
 
 
@@ -403,14 +409,14 @@ body {
 .circle-outer {
     background-color:#000;
     padding:5px;
-    animation-name:rotateClosckwise;
+    animation-name:rotateClockwise;
     animation-duration:1s;
     animation-timing-function:linear;
     animation-iteration-count:infinite;
 }
 .circle-inner {
     background-color:#000;
-    animation-name:rotateAntsiClockwise;
+    animation-name:rotateAntiClockwise;
     animation-duration:0.3s;
     animation-timing-function:linear;
     animation-iteration-count:infinite;
@@ -643,3 +649,22 @@ body {
         page-break-after: avoid;
     }
 }
+
+::-webkit-scrollbar {
+      width: 15px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: #003333;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: #00ffff; 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #007f7f;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
