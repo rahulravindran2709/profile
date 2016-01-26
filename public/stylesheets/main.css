@@ -139,11 +139,9 @@ body {
     transition-timing-function: steps(1);
     text-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 20px #00ffff, 0px 0px 30px #00ffff;
 }
-
+.section{margin-bottom:10px;}
 .window-pane {
-    border: 2px solid #00ffff;
     border-radius: 3px;
-    width: 90%;
     margin: 0 auto;
     padding: 20px;
     background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.2, #142636), color-stop(0.83, #244461));
@@ -152,7 +150,6 @@ body {
     background-image: -webkit-linear-gradient(bottom, #142636 20%, #244461 83%);
     background-image: -ms-linear-gradient(bottom, #142636 20%, #244461 83%);
     background-image: linear-gradient(to bottom, #142636 20%, #244461 83%);
-    box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 20px #00ffff, 0px 0px 30px #00ffff;
 }
 
 .pane-heading {
@@ -308,6 +305,7 @@ body {
 .carousel-container {
     width: 100%;
     overflow: hidden;
+    padding:35px 0px;
 }
 
 .carousel-container .carousel-slider {
@@ -540,7 +538,7 @@ body {
 
 .custom-scrollbar {
     overflow-y: auto;
-    height: 250px;
+    height: 360px;
 }
 
 
